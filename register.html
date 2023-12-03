@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="logreg.css" />
+    <script src="script.js" defer></script>
+    <script src="logreg.js" defer></script>
+    <title>QuasarX - Login/Register</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div id="mobile-menu" class="mobile-main-menu">
+      <ul>
+        <li class="mobile-only"><a href="index.html">Home Page</a></li>
+        <li class="mobile-only"><a href="spaceX.html">SpaceX</a></li>
+        <li class="mobile-only"><a href="nasa.html">NASA</a></li>
+        <li class="mobile-only"><a href="isro.html">ISRO</a></li>
+        <li class="mobile-only"><a href="roscosmos.html">ROSCOSMOS</a></li>
+        <li class="mobile-only"><a href="celevents.html">Celestial Events</a></li>
+        <li class="mobile-only"><a href="logreg.html">Login/Register</a></li>
+      </ul>
+    </div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+            <br><br><br><img src="images/QuasarXlogo.png" alt="QuasarX"/>
+        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="spaceX.html">SpaceX</a></li>
+          <li><a href="isro.html">ISRO</a></li>
+          <li><a href="nasa.html">NASA</a></li>
+          <li><a href="roscosmos.html">Roscosmos</a></li>
+          <li><a href="celevents.html">Celestial Events</a></li>
+          <li><a href="logreg.html">Login/Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+
+    <section class="section-animate bg-logreg"></section>
+    <div class="section-inner-center">
+      <h3>Quasar X</h3>
+      <p>A Space Exploration Dashboard Site!</p>
+    </div>
+   
+
+    
+ <!----------------------------------------------------->
+<!-- YourAppName/templates/register.html -->
+
+    <h2>Register</h2>
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+
+
+
+ <!-------------------------------------------------------------->
+ <footer>
+      <ul>
+        <li>QuasarX &copy; 2023</li>
+        <li><a href="https://twitter.com/KarmanyaY">Twitter</a></li>
+        <li><a href="https://www.youtube.com/channel/UCEb_5QbE8dC2bkArtqmqL-g">YouTube</a></li>
+        <li><a href="https://www.instagram.com/karmanyaravindra/">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/karmanya-ravindra-1332811b6/">LinkedIn</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Official Site</a></li>
+    </footer>
+  </body>
+</html>
