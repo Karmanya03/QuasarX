@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="28200107832-bkr3m3jsgpfssk2q6ma97o2dfdp19j5i.apps.googleusercontent.com">
     <link rel="stylesheet" href="logreg.css" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
     <script src="script.js" defer></script>
     <script src="logreg.js" defer></script>
     <!-- Add this script tag to include the Google Sign-In library -->
@@ -63,6 +66,9 @@
 <!-- YourAppName/templates/register.html -->
 <!-- Add a div with the "g-signin2" class for the sign-in button -->
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>gapi.load('auth2', function(){
+  gapi.auth2.init();
+});</script>
 <script>
   function onSignIn(googleUser) {
     // Handle the sign-in logic here
@@ -74,9 +80,8 @@
   }
 </script>
 <!-- Add a link with an onclick event for the sign-out button -->
+<div class="g-signout2" data-onsuccess="onSignOut"></div>
 <a href="logreg.html" onclick="signOut();">Sign out</a>
-
-<!-- Add a script tag with the signOut function -->
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -85,6 +90,8 @@
     });
   }
 </script>
+
+
 
 
 
