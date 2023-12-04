@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="user.css" />
+    <script src="user.js" defer></script>
+    <title>QuasarX - User Page</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div id="mobile-menu" class="mobile-main-menu">
+      <ul>
+        <li class="mobile-only"><a href="index.html">Home Page</a></li>
+        <li class="mobile-only"><a href="spaceX.html">SpaceX</a></li>
+        <li class="mobile-only"><a href="nasa.html">NASA</a></li>
+        <li class="mobile-only"><a href="isro.html">ISRO</a></li>
+        <li class="mobile-only"><a href="roscosmos.html">ROSCOSMOS</a></li>
+        <li class="mobile-only"><a href="celevents.html">Celestial Events</a></li>
+        <li class="mobile-only"><a href="logreg.html">Login/Register</a></li>
+      </ul>
+    </div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+            <br><br><br><img src="images/QuasarXlogo.png" alt="QuasarX"/>        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="spaceX.html">SpaceX</a></li>
+          <li><a href="isro.html">ISRO</a></li>
+          <li><a href="nasa.html">NASA</a></li>
+          <li><a href="roscosmos.html">Roscosmos</a></li>
+          <li><a href="celevents.html">Celestial Events</a></li>
+          <li><a href="logreg.html">Login/Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+
+    <section class="section-animate bg-celevents"></section>
+    <div class="section-inner-center">
+      <h3>User Dashboard</h3>
+    </div>
+
+
+    <div class="container">
+      <h1>User Profile</h1>
+      <form id="profileForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio"></textarea>
+  
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="favspc">Favourite Space Agency:</label>
+        <input type="text" id="favspc" name="favspc">
+
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+    <div id="userDataDisplay"></div>
+
+    <script src="app.js"></script>
+
+
+<!--------------footer------------>
+    <footer>
+      <ul>
+        <li>QuasarX &copy; 2023</li>
+        <li><a href="https://linktr.ee/QuasarXsocials">Twitter</a></li>
+        <li><a href="https://linktr.ee/QuasarXsocials">YouTube</a></li>
+        <li><a href="https://linktr.ee/QuasarXsocials">Instagram</a></li>
+        <li><a href="https://linktr.ee/QuasarXsocials">LinkedIn</a></li>
+        <li><a href="https://www.netlify.com/privacy/">Privacy</a></li>
+        <li><a href="https://quasarx.netlify.app">Official Site</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
