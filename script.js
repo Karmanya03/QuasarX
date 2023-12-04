@@ -57,3 +57,53 @@ function countUp() {
 function reset() {
   counters.forEach((counter) => (counter.innerHTML = '0'));
 }
+
+
+
+/*==================NASA API======================= */
+async function fetchSpaceNews() {
+  const apiKey = 'dR4bbzA5ImT4PIdcFvAre0ezrBrt3jn5Ox6UCLuc'; // Replace with your actual API key
+  const apiUrl = 'https://newsapi.org/v2/top-headlines?category=science&apiKey=' + dR4bbzA5ImT4PIdcFvAre0ezrBrt3jn5Ox6UCLuc;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    // Handle the data and update your website
+    updateNewsUI(data.articles);
+  } catch (error) {
+    console.error('Error fetching space news:', error);
+  }
+}
+
+function updateNewsUI(articles) {
+  // Update your website's UI with the latest news
+  // You can create HTML elements dynamically and append them to the DOM
+}
+
+
+// Fetch space news every 15 minutes (adjust as needed)
+setInterval(fetchSpaceNews, 900000); // 900,000 milliseconds = 15 minutes
+
+
+
+/*=================*/
+function updateNewsUI(articles) {
+  const newsContainer = document.getElementById('news-container');
+
+  // Clear existing content
+  newsContainer.innerHTML = '';
+
+  // Iterate through articles and create HTML elements
+  articles.forEach(article => {
+    const newsItem = document.createElement('div');
+    newsItem.innerHTML = `
+      <h3>${article.title}</h3>
+      <p>${article.description}</p>
+      <a href="${article.url}" target="_blank">Read more</a>
+    `;
+
+    // Append news item to the container
+    newsContainer.appendChild(newsItem);
+  });
+}

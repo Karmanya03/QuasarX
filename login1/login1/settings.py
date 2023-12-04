@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jb39fde_bdgp5&$c!w$27gd_^rk#9vo(9a_j@u@hqu@tii6r8^'
+SECRET_KEY = 'django-insecure-87#f*lrp)2mzto2-j9m923m-xk^f4+$%%hotltf4o2+jsfy=m8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,28 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'allauth',
-    'allauth.account',
-    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
 ]
-
-# Add the following lines if not present
-AUTHENTICATION_BACKENDS = [
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-urlpatterns = [
-    # ...
-    path('accounts/', include('allauth.urls')),
-    path('accounts/', include('accounts.urls')),  # Add this line if you create a separate app for accounts
-    # ...
-]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
