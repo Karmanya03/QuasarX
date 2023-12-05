@@ -88,3 +88,16 @@ function OAuth() {
 
 // Export the OAuth component
 module.exports = OAuth;
+
+
+
+
+
+function onSignIn(googleUser) {
+  // Handle the sign-in logic here
+
+  // Redirect to user.html after a short delay
+  setTimeout(function() {
+    window.location.href = 'user.html';
+  }, 1000); // Adjust the delay as needed (in milliseconds)
+}

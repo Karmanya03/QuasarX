@@ -75,10 +75,14 @@
 <script>
   // Load the Google API library
   gapi.load('auth2', function() {
-    gapi.auth2.init({
-      client_id: '28200107832-bkr3m3jsgpfssk2q6ma97o2dfdp19j5i.apps.googleusercontent.com'  // Replace with your actual Google Client ID
-    });
+  console.log('Google API loaded');
+
+  gapi.auth2.init({
+    client_id: '28200107832-bkr3m3jsgpfssk2q6ma97o2dfdp19j5i.apps.googleusercontent.com',
+  }).then(function() {
+    console.log('Google Sign-In initialized');
   });
+});
 
   // Callback function when the user signs in
   function onSignIn(googleUser) {
