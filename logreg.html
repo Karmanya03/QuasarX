@@ -26,6 +26,7 @@
         <li class="mobile-only"><a href="roscosmos.html">ROSCOSMOS</a></li>
         <li class="mobile-only"><a href="celevents.html">Celestial Events</a></li>
         <li class="mobile-only"><a href="logreg.html">Login/Register</a></li>
+        <li class="mobile-only"><a href="user.html">User Dashboard</a></li>
       </ul>
     </div>
     <header class="main-header">
@@ -43,6 +44,7 @@
           <li><a href="roscosmos.html">Roscosmos</a></li>
           <li><a href="celevents.html">Celestial Events</a></li>
           <li><a href="logreg.html">Login/Register</a></li>
+          <li><a href="user.html">User Dashboard</a></li>
         </ul>
       </nav>
     </header>
@@ -72,6 +74,7 @@
 <script>
   function onSignIn(googleUser) {
     // Handle the sign-in logic here
+    <a href="user.html" onclick="sign-in();"></a>
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId());
     console.log('Name: ' + profile.getName());
@@ -81,7 +84,7 @@
 </script>
 <!-- Add a link with an onclick event for the sign-out button -->
 <div class="g-signout2" data-onsuccess="onSignOut"></div>
-<a href="logreg.html" onclick="signOut();">Sign out</a>
+<a href="logreg.html" onclick="signOut();"></a>
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();

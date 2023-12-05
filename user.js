@@ -91,5 +91,5 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('UserList', JSON.stringify(Username) );
   }
   document.addEventListener('DOMContentLoaded', ()=>{
-      document.getElementById('btn').addEventListener('click', addUsername);
+      document.getElementById('btn').addEventListener('click', addMovie);
   });
