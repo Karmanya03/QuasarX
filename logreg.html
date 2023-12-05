@@ -67,23 +67,23 @@
  <!----------------------------------------------------->
 <!-- YourAppName/templates/register.html -->
 <!-- Add a div with the "g-signin2" class for the sign-in button -->
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<button onclick="redirectToUserPage()">Sign In</button>
 <script>
-  gapi.load('auth2', function() {
-    gapi.auth2.init();
-  });
+  function redirectToUserPage() {
+    // Simulate sign-in logic
+    var fakeGoogleUser = { getBasicProfile: function() {} };
+    onSignIn(fakeGoogleUser);
+  }
 
   function onSignIn(googleUser) {
     // Handle the sign-in logic here
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Name: ' + profile.getName());
-    console.log('Email: ' + profile.getEmail());
+    // ...
 
     // Redirect to user.html after successful sign-in
-    window.location.href = 'user.html';
+    window.location.replace('user.html');
   }
 </script>
+
 
 <!-- Add a link with an onclick event for the sign-out button -->
 <div class="g-signout2" data-onsuccess="onSignOut"></div>
@@ -110,8 +110,8 @@
         <li><a href="https://www.youtube.com/channel/UCEb_5QbE8dC2bkArtqmqL-g">YouTube</a></li>
         <li><a href="https://www.instagram.com/karmanyaravindra/">Instagram</a></li>
         <li><a href="https://www.linkedin.com/in/karmanya-ravindra-1332811b6/">LinkedIn</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Official Site</a></li>
+        <li><a href="https://www.netlify.com/privacy/">Privacy</a></li>
+        <li><a href="https://quasarx.netlify.app">Official Site</a></li>
     </footer>
   </body>
 </html>
