@@ -68,20 +68,23 @@
 <!-- YourAppName/templates/register.html -->
 <!-- Add a div with the "g-signin2" class for the sign-in button -->
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
-<script>gapi.load('auth2', function(){
-  gapi.auth2.init();
-});</script>
 <script>
+  gapi.load('auth2', function() {
+    gapi.auth2.init();
+  });
+
   function onSignIn(googleUser) {
     // Handle the sign-in logic here
-    <a href="user.html" onclick="sign-in();"></a>
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId());
     console.log('Name: ' + profile.getName());
     console.log('Email: ' + profile.getEmail());
-    // Add more handling or send the user data to your server
+
+    // Redirect to user.html after successful sign-in
+    window.location.href = 'user.html';
   }
 </script>
+
 <!-- Add a link with an onclick event for the sign-out button -->
 <div class="g-signout2" data-onsuccess="onSignOut"></div>
 <a href="logreg.html" onclick="signOut();"></a>
